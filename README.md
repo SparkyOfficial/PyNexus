@@ -73,7 +73,7 @@ pip install pynexus
 Або для розробки:
 
 ```bash
-git clone https://github.com/yourusername/PyNexus.git
+git clone https://github.com/SparkyOfficial/PyNexus.git
 cd PyNexus
 pip install -e .
 ```
@@ -130,7 +130,7 @@ model = px.random_forest_classifier(X_train, y_train)
 
 ## Автори
 
-- **Розробники PyNexus** - [yourusername](https://github.com/yourusername)
+- **Розробники PyNexus** - [yourusername](https://github.com/SparkyOfficial)
 
 ## Подяки
 
