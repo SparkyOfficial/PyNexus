@@ -1,117 +1,80 @@
-# PyNexus - Універсальна науково-аналітична бібліотека
-# Інтелектуальна система для комплексного наукового аналізу
-
 """
-PyNexus - це універсальна науково-аналітична бібліотека, розроблена для об'єднання 
-можливостей різних наукових бібліотек Python в єдиний інтуїтивний інтерфейс. 
-Бібліотека забезпечує доступ до широкого спектру функцій для обчислень, аналізу даних, 
-візуалізації, машинного навчання та багатьох інших наукових задач.
+PyNexus - Універсальна науково-аналітична бібліотека
+
+Автор: Андрій Будильников
 """
 
-__version__ = "0.2.0"
-__author__ = "PyNexus Development Team"
-__email__ = "pynexus.dev@example.com"
-__license__ = "MIT"
-__description__ = "Універсальна науково-аналітична бібліотека"
+__version__ = "1.0.0"
+__author__ = "Андрій Будильников"
 
-# Імпортуємо основні модулі
+# Імпортування основних модулів
 from .core import *
 from .analysis import *
 from .solver import *
 from .visualization import *
-from .ml import *
-from .numerics import *
-from .signal_processing import *
-from .data_processing import *
-from .statistics import *
-from .advanced_plots import *
-from .advanced_math import *
-from .optimization import *
+
+# Імпортування спеціалізованих модулів
+from .mathematics import *
 from .physics import *
 from .chemistry import *
 from .biology import *
-from .finance import *
 from .engineering import *
+from .economics import *
+from .finance import *
+from .statistics import *
+from .ml import *
+from .numerics import *
+from .data_processing import *
+from .signal_processing import *
+from .optimization import *
+from .advanced_math import *
+from .advanced_plots import *
 from .geoscience import *
 from .meteorology import *
 from .oceanography import *
-from .astronomy import *
-from .materials import *
-from .medicine import *
 from .environmental import *
+from .medicine import *
 from .neuroscience import *
-from .mathematics import *
-from .linguistics import *
-from .social_sciences import *
-from .economics import *
 from .psychology import *
+from .social_sciences import *
+from .linguistics import *
 from .interdisciplinary import *
+from .materials import *
+from .astronomy import *
 from .computational_science import *
+from .computational_mathematics import *
+from .computational_physics import *
+from .computational_chemistry import *
+from .computational_biology import *
+from .computational_engineering import *
+from .computational_economics import *
+from .computational_finance import *
 
-# Імпортуємо CLI інтерфейс
-from .cli import main as cli_main
+# Імпортування утиліт
+from .utils.cache import *
+from .utils.lazy import *
+from .utils.profile import *
 
-# Імпортуємо утиліти
-from .utils import *
+# Створення зручних псевдонімів
+px = globals()
 
-# Визначаємо публічний API
 __all__ = [
     # Основні модулі
-    'core',
-    'analysis', 
-    'solver',
-    'visualization',
-    'ml',
-    'numerics',
-    'signal_processing',
-    'data_processing',
-    'statistics',
-    'advanced_plots',
-    'advanced_math',
-    'optimization',
-    'physics',
-    'chemistry',
-    'biology',
-    'finance',
-    'engineering',
-    'geoscience',
-    'meteorology',
-    'oceanography',
-    'astronomy',
-    'materials',
-    'medicine',
-    'environmental',
-    'neuroscience',
-    'mathematics',
-    'linguistics',
-    'social_sciences',
-    'economics',
-    'psychology',
-    'interdisciplinary',
-    'computational_science',
+    'core', 'analysis', 'solver', 'visualization',
     
-    # CLI
-    'cli_main',
+    # Спеціалізовані модулі
+    'mathematics', 'physics', 'chemistry', 'biology',
+    'engineering', 'economics', 'finance', 'statistics',
+    'ml', 'numerics', 'data_processing', 'signal_processing',
+    'optimization', 'advanced_math', 'advanced_plots',
+    'geoscience', 'meteorology', 'oceanography', 'environmental',
+    'medicine', 'neuroscience', 'psychology', 'social_sciences',
+    'linguistics', 'interdisciplinary', 'materials', 'astronomy',
+    'computational_science', 'computational_mathematics',
+    'computational_physics', 'computational_chemistry',
+    'computational_biology', 'computational_engineering',
+    'computational_economics', 'computational_finance',
     
     # Утиліти
     'utils'
 ]
-
-# Налаштування для імпорту
-import os
-import sys
-
-# Встановлюємо змінні середовища для роботи з бібліотекою
-os.environ['PYNEXUS_HOME'] = os.path.dirname(os.path.abspath(__file__))
-os.environ['PYNEXUS_VERSION'] = __version__
-
-# Ініціалізація бібліотеки
-def init():
-    """
-    Ініціалізація PyNexus бібліотеки.
-    """
-    print(f"PyNexus v{__version__} ініціалізовано успішно!")
-    print("Готовий до наукових обчислень та аналізу даних.")
-
-# Автоматична ініціалізація при імпорті
-init()
